@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Calyx of Held - Monte Carlo simulations</title>
+  </head>
+
+  <body>
+    <h1>MCell scripts for the simulation of mEPSCs at the Calyx of Held</h1>
+
+    <p>Simulation Results are presented in:</p>
+
+    <cite>
+      Postlethwaite M, Hennig MH, Steinert JR, Graham BP, Forsythe ID
+      (2007) <a
+      href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=AbstractPlus&list_uids=17138605&query_hl=5&itool=pubmed_docsum">
+      Acceleration of AMPA receptor kinetics underlies
+      temperature-dependent changes in synaptic strength at the rat
+      calyx of Held. </a> J Physiol. 579(Pt 1): 69-84
+    </cite>
+    <p><b>These simulations require MCell version 2 (specifically 2.76)</b></p>
+
+    <p>The MCell simulations are controlled by the following set of
+    scripts:</p> 
+
+    <p><a href="MCell_scripts/calyx.mdl">calyx.mdl</a>: the main simulation script.</p>
+
+    <p><a href="MCell_scripts/geometry.mdl">geometry.mdl</a>: definition of the synaptic geometry.</p>
+
+
+    <p><a href="MCell_scripts/effectors.mdl">effectors.mdl</a>: the postsynaptic AMPA receptors</p>
+
+    <p><a href="MCell_scripts/parameters.mdl">parameters.mdl</a>: definition of simulation parameters.</p>
+
+    <p><a href="MCell_scripts/output.mdl">output.mdl</a>: definition of simulation output.</p>
+
+    <p><a href="MCell_scripts/3dout.mdl">3dout.mdl</a>: defines rules
+    for the output of visualisation data for DREAMM.</p>
+
+    <p>The simulations use the checkpointing mechanism of MCell to
+    modify the diameter of the fusion pore that connects the vesicle
+    with the extracellular space. Therefore, each simulation is
+    controlled by a perl script. A whole set of simulations is
+    controlled by the following perl scripts, which can be used to run
+    multiple simulations in parallel on clusters:</p>
+ 
+    <p><a
+    href="MCell_scripts/prepare_simulation_script.pl">prepare_simulation_scripts.pl</a>:
+    this script prepares one or multiple simulation with different
+    parameter sets.</p>
+
+    <p><a href="MCell_scripts/run.pl">run.pl</a>: this script runs a single simulation.</p>
+
+    <h1>Movies generated with MCell and DREAMM</h1>
+
+    <p>In these movies, glutamate molecules are shown in yellow,
+    closed receptors in grey (light grey indicate unbound receptors,
+    dark grey bound receptors), open receptors in red (the darker, the
+    higher the associated conductance), and desensitised receptors in
+    blue.</p>
+
+    <a href="http://www.cn.stir.ac.uk/~mhh1/Calyx/overview_movie_25fps.avi">Movie showing release site from top, playing at 20 frames per sec (1 frame = 1 \mu s).</a>
+
+<br />
+
+    <a href="http://www.cn.stir.ac.uk/~mhh1/Calyx/inside_movie_25fps.avi">A release from the perspective of someone sitting inside the synaptic cleft, 25 frames per sec (1 frame = 1 \mu s).</a>
+
+    <h1>References</h1>
+    <p><a href="http://www.mcell.cnl.salk.edu/">MCell at Salk Institute</a></p>
+    <p><a href="http://www.mcell.psc.edu/">MCell at PSC</a></p>
+    <p><a href="http://www.mcell.psc.edu/DReAMM/">DREAMM at PSC</a></p>
+
+    <hr>
+    <address>Mattias Hennig</a></address>
+<!-- Created: Thu Jan 19 17:38:56 GMT 2006 -->
+<!-- hhmts start -->
+Last modified: Fri Feb 16 16:01:48 GMT 2007
+<!-- hhmts end -->
+  </body>
+</html>
